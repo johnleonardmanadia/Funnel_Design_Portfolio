@@ -1,0 +1,45 @@
+/* ==========================================================================
+   RESPONSIVE BREAKPOINTS & MOBILE ADJUSTMENTS
+   ========================================================================== */
+
+@media (max-width: 991.98px) {
+  .section-padding { padding: 60px 0; }
+  .hero-section { padding-top: 80px; }
+  section[id] { scroll-margin-top: 75px; }
+  .display-3 { font-size: 2.5rem; }
+  .display-5 { font-size: 2rem; }
+  .display-6 { font-size: 1.75rem; }
+  
+  .custom-navbar .navbar-collapse {
+    background-color: var(--bg-primary);
+    border-bottom: 1px solid var(--border-color);
+    padding: 20px;
+    margin-top: 10px;
+  }
+  
+  .floating-card {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    margin-top: 15px;
+  }
+  
+  .custom-cursor, .custom-cursor-follower {
+    display: none !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero-stats .stat-number {
+    font-size: 1.75rem;
+  }
+  .portfolio-filters {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 10px;
+    width: 100%;
+  }
+  .testimonial-card {
+    padding: 24px;
+  }
+}
