@@ -1,9 +1,9 @@
+
 /* General Website Functionality (Scroll Progress, Active Nav, Cursor, Modals) */
 document.addEventListener("DOMContentLoaded", () => {
   // Scroll Progress & Navbar Toggle
   const scrollProgressBar = document.getElementById("scrollProgressBar");
   const backToTopBtn = document.getElementById("backToTopBtn");
-  const navbar = id("mainNavbar");
 
   window.addEventListener("scroll", () => {
     const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
@@ -42,10 +42,13 @@ document.addEventListener("DOMContentLoaded", () => {
       const sectionTop = current.offsetTop - 120;
       const sectionId = current.getAttribute("id");
 
+      const navLink = document.querySelector('.navbar-nav a[href="#' + sectionId + '"]');
+      if (!navLink) return; // section has no nav link (e.g. removed from the menu)
+
       if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-        document.querySelector(".navbar-nav a[href*=" + sectionId + "]")?.classList.add("active");
+        navLink.classList.add("active");
       } else {
-        document.querySelector(".navbar-nav a[href*=" + sectionId + "]")?.classList.remove("active");
+        navLink.classList.remove("active");
       }
     });
   });

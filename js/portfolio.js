@@ -1,3 +1,4 @@
+
 /* Portfolio Data, Filtering, and Modal Logic */
 const projectsData = [
   {

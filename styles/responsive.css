@@ -23,6 +23,13 @@
     left: 0;
     margin-top: 15px;
   }
+
+  .hero-image-frame { max-width: 340px; }
+  .hero-chip { font-size: 0.75rem; padding: 6px 12px; }
+  .hero-chip-1 { left: 0; }
+  .hero-chip-2 { right: 0; }
+  .hero-chip-3 { left: 0; }
+  .hero-chip-4 { right: 0; }
   
   .custom-cursor, .custom-cursor-follower {
     display: none !important;
@@ -42,4 +49,8 @@
   .testimonial-card {
     padding: 24px;
   }
+  .hero-image-frame { max-width: 280px; }
+  .hero-chip-3, .hero-chip-4 { display: none; }
+  .hero-chip-1 { top: 4%; left: -4%; }
+  .hero-chip-2 { top: 26%; right: -4%; }
 }

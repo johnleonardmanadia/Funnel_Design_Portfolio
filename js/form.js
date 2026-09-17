@@ -1,3 +1,4 @@
+
 /* Contact Form Validation and AJAX Feedback Simulation */
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("contactForm");
