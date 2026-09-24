@@ -1,4 +1,6 @@
 
+
+
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="dark">
 <head>
@@ -73,22 +75,122 @@
   <!-- Main Content Wrappers -->
   <main>
     <!-- HERO SECTION -->
-    <section id="home" class="hero-section min-vh-100 d-flex align-items-center position-relative overflow-hidden">
+    <section id="home" class="hero-section position-relative overflow-hidden">
       <div class="hero-bg-grid"></div>
       <div class="container position-relative z-1">
         <div class="row align-items-center gy-5">
-          <div class="col-lg-10 mx-auto text-center">
+
+          <!-- LEFT: text -->
+          <div class="col-lg-6">
             <div class="hero-content">
-              <h1 class="hero-title display-3 fw-bold mb-4 tracking-tight reveal">
+              <h1 class="hero-title fw-bold mb-4 tracking-tight reveal">
                 Designing Funnels That Turn Attention Into <span class="text-gold-gradient">Action</span><span class="dot">.</span>
               </h1>
-              <p class="hero-subtitle fs-5 text-secondary mb-5 reveal">
+              <p class="hero-subtitle fs-5 text-secondary mb-4 reveal">
                 I create strategic, conversion-focused funnel designs that help businesses attract leads, build trust, and turn visitors into high-value customers.
               </p>
-              <div class="d-flex flex-wrap justify-content-center gap-3 mb-5 reveal">
-                <a href="#works" class="btn btn-primary-custom btn-lg">View My Work <i class="bi bi-arrow-down-right ms-2"></i></a>
-                <a href="#contact" class="btn btn-outline-custom btn-lg">Let's Work Together</a>
+              <div class="d-flex flex-wrap gap-3 mb-4 reveal">
+                <a href="#works" class="btn btn-primary-custom hero-btn">View My Work <i class="bi bi-arrow-down-right ms-2"></i></a>
+                <a href="#contact" class="btn btn-outline-custom hero-btn">Let's Work Together</a>
               </div>
+            </div>
+          </div>
+
+          <!-- RIGHT: vertical carousels (left col goes UP, right col goes DOWN) -->
+          <div class="col-lg-6">
+            <div class="hero-vmarquee reveal">
+        <div class="vmarquee-col">
+          <div class="vmarquee-track vmarquee-up" id="vmarqueeUp">
+            <!-- SET 1 -->
+            <div class="vmarquee-card">
+              <img src="assets/projects/Estate Editorial - Home.png" alt="Corporate Landing Page" loading="lazy" />
+              <span class="vmarquee-label">Corporate Landing Page</span>
+            </div>
+            <div class="vmarquee-card">
+              <img src="assets/projects/BrewMaster Pro - Employees.png" alt="Employee Management Dashboard" loading="lazy" />
+              <span class="vmarquee-label">Employee Management Dashboard</span>
+            </div>
+            <div class="vmarquee-card">
+              <img src="assets/projects/Lumina Dental - Home.png" alt="Dental Clinic" loading="lazy" />
+              <span class="vmarquee-label">Dental Clinic</span>
+            </div>
+            <div class="vmarquee-card">
+              <img src="assets/images/portfolio/project-4.jpg" alt="E-commerce Store Funnel" loading="lazy" />
+              <span class="vmarquee-label">E-commerce Store Funnel</span>
+            </div>
+            <div class="vmarquee-card">
+              <img src="assets/images/portfolio/project-5.jpg" alt="Webinar Registration Funnel" loading="lazy" />
+              <span class="vmarquee-label">Webinar Registration Funnel</span>
+            </div>
+            <!-- SET 2: duplicate for seamless loop (keep identical to set 1) -->
+            <div class="vmarquee-card" aria-hidden="true">
+              <img src="assets/images/portfolio/project-1.jpg" alt="" loading="lazy" />
+              <span class="vmarquee-label">SaaS Sign-up Funnel</span>
+            </div>
+            <div class="vmarquee-card" aria-hidden="true">
+              <img src="assets/images/portfolio/project-2.jpg" alt="" loading="lazy" />
+              <span class="vmarquee-label">Lead Magnet Landing Page</span>
+            </div>
+            <div class="vmarquee-card" aria-hidden="true">
+              <img src="assets/images/portfolio/project-3.jpg" alt="" loading="lazy" />
+              <span class="vmarquee-label">VSL Sales Page</span>
+            </div>
+            <div class="vmarquee-card" aria-hidden="true">
+              <img src="assets/images/portfolio/project-4.jpg" alt="" loading="lazy" />
+              <span class="vmarquee-label">E-commerce Store Funnel</span>
+            </div>
+            <div class="vmarquee-card" aria-hidden="true">
+              <img src="assets/images/portfolio/project-5.jpg" alt="" loading="lazy" />
+              <span class="vmarquee-label">Webinar Registration Funnel</span>
+            </div>
+          </div>
+        </div>
+        <div class="vmarquee-col">
+          <div class="vmarquee-track vmarquee-down" id="vmarqueeDown">
+            <!-- SET 1 -->
+            <div class="vmarquee-card">
+              <img src="assets/images/portfolio/project-6.jpg" alt="Course Enrollment Funnel" loading="lazy" />
+              <span class="vmarquee-label">Course Enrollment Funnel</span>
+            </div>
+            <div class="vmarquee-card">
+              <img src="assets/images/portfolio/project-7.jpg" alt="Coaching Application Funnel" loading="lazy" />
+              <span class="vmarquee-label">Coaching Application Funnel</span>
+            </div>
+            <div class="vmarquee-card">
+              <img src="assets/images/portfolio/project-8.jpg" alt="App Download Landing Page" loading="lazy" />
+              <span class="vmarquee-label">App Download Landing Page</span>
+            </div>
+            <div class="vmarquee-card">
+              <img src="assets/images/portfolio/project-9.jpg" alt="Event Registration Funnel" loading="lazy" />
+              <span class="vmarquee-label">Event Registration Funnel</span>
+            </div>
+            <div class="vmarquee-card">
+              <img src="assets/images/portfolio/project-10.jpg" alt="Newsletter Opt-in Page" loading="lazy" />
+              <span class="vmarquee-label">Newsletter Opt-in Page</span>
+            </div>
+            <!-- SET 2: duplicate for seamless loop (keep identical to set 1) -->
+            <div class="vmarquee-card" aria-hidden="true">
+              <img src="assets/images/portfolio/project-6.jpg" alt="" loading="lazy" />
+              <span class="vmarquee-label">Course Enrollment Funnel</span>
+            </div>
+            <div class="vmarquee-card" aria-hidden="true">
+              <img src="assets/images/portfolio/project-7.jpg" alt="" loading="lazy" />
+              <span class="vmarquee-label">Coaching Application Funnel</span>
+            </div>
+            <div class="vmarquee-card" aria-hidden="true">
+              <img src="assets/images/portfolio/project-8.jpg" alt="" loading="lazy" />
+              <span class="vmarquee-label">App Download Landing Page</span>
+            </div>
+            <div class="vmarquee-card" aria-hidden="true">
+              <img src="assets/images/portfolio/project-9.jpg" alt="" loading="lazy" />
+              <span class="vmarquee-label">Event Registration Funnel</span>
+            </div>
+            <div class="vmarquee-card" aria-hidden="true">
+              <img src="assets/images/portfolio/project-10.jpg" alt="" loading="lazy" />
+              <span class="vmarquee-label">Newsletter Opt-in Page</span>
+            </div>
+          </div>
+        </div>
             </div>
           </div>
 
@@ -260,26 +362,30 @@
     <!-- WORKS / PORTFOLIO SECTION -->
     <section id="works" class="section-padding bg-black-secondary">
       <div class="container">
-        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-5 reveal">
+        <div class="d-flex flex-column justify-content-center align-items-center text-center mb-5 reveal">
           <div>
             <span class="text-uppercase tracking-wider small text-secondary">Selected Projects</span>
             <h2 class="display-6 fw-bold mb-0">Featured Works<span class="dot">.</span></h2>
           </div>
           <!-- Filters -->
-          <div class="portfolio-filters mt-4 mt-md-0 d-flex flex-wrap gap-2" id="portfolioFilters">
+          <div class="portfolio-filters mt-4 d-flex flex-wrap justify-content-center gap-2" id="portfolioFilters">
             <button class="btn btn-filter active" data-filter="all">All</button>
-            <button class="btn btn-filter" data-filter="landing-pages">Landing Pages</button>
-            <button class="btn btn-filter" data-filter="sales-funnels">Sales Funnels</button>
-            <button class="btn btn-filter" data-filter="lead-gen">Lead Generation</button>
-            <button class="btn btn-filter" data-filter="vsl">VSL</button>
-            <button class="btn btn-filter" data-filter="ecommerce">E-commerce</button>
-            <button class="btn btn-filter" data-filter="ui-ux">UI/UX</button>
+            <button class="btn btn-filter" data-filter="funnel-design">Funnel Design</button>
+            <button class="btn btn-filter" data-filter="ui-design">UI Design</button>
+            <button class="btn btn-filter" data-filter="web-development">Web Development</button>
           </div>
         </div>
 
         <!-- Portfolio Grid -->
         <div class="row g-4" id="portfolioGrid">
           <!-- Projects generated/managed via portfolio.js -->
+        </div>
+
+        <!-- See More Link -->
+        <div class="text-center mt-5">
+          <a href="#" target="_blank" rel="noopener" class="see-more-link">
+            See more of my work <i class="bi bi-box-arrow-up-right"></i>
+          </a>
         </div>
       </div>
     </section>
@@ -478,21 +584,6 @@
   <button class="back-to-top-btn" id="backToTopBtn" aria-label="Back to Top">
     <i class="bi bi-arrow-up"></i>
   </button>
-
-  <!-- PROJECT MODAL -->
-  <div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-xl">
-      <div class="modal-content bg-black text-white border-dark">
-        <div class="modal-header border-dark">
-          <h5 class="modal-title fw-bold" id="projectModalLabel">Project Details</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body p-4 p-md-5" id="projectModalBody">
-          <!-- Dynamic Content Loaded by JS -->
-        </div>
-      </div>
-    </div>
-  </div>
 
   <!-- CERTIFICATE LIGHTBOX MODAL -->
   <div class="modal fade" id="certModal" tabindex="-1" aria-hidden="true">

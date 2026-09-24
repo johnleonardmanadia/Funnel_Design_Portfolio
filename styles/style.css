@@ -1,3 +1,8 @@
+
+
+
+
+
 /* ==========================================================================
    STRICT MONOCHROME THEME & CORE STYLES
    ========================================================================== */
@@ -48,7 +53,10 @@ section[id] {
 }
 
 .hero-section {
-  padding-top: 60px;
+  padding: 110px 0 50px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
 .bg-black-secondary {
@@ -494,6 +502,40 @@ section[id] {
   overflow: hidden;
   position: relative;
 }
+.see-more-link {
+  color: var(--gold);
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: var(--transition-smooth);
+}
+.see-more-link:hover {
+  color: var(--gold);
+  text-decoration: underline;
+}
+.browser-frame-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 14px;
+  background: var(--card-bg);
+  border-bottom: 1px solid var(--border-color);
+}
+.browser-frame-bar span {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--border-color);
+}
+.browser-frame-bar span:nth-child(1) { background: #ff5f57; }
+.browser-frame-bar span:nth-child(2) { background: #febc2e; }
+.browser-frame-bar span:nth-child(3) { background: #28c840; }
+.browser-frame-scroll {
+  max-height: 260px;
+  overflow: hidden;
+}
 .project-img-wrapper svg,
 .project-img-wrapper img {
   transition: transform 0.5s ease;
@@ -567,4 +609,110 @@ section[id] {
 .reveal.active {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* ==========================================================================
+   HERO VERTICAL MARQUEE  (2 columns: left scrolls UP, right scrolls DOWN)
+   ========================================================================== */
+
+.hero-title {
+  font-size: clamp(2.8rem, 5.4vw, 4.6rem);
+  line-height: 1.1;
+}
+
+.hero-btn {
+  padding: 9px 22px;
+  font-size: 0.95rem;
+}
+
+.hero-vmarquee {
+  --vm-gap: 16px;
+  --vm-card-h: 220px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--vm-gap);
+  height: clamp(420px, 78vh, 640px);
+  overflow: hidden;
+  /* fade at top & bottom */
+  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 12%, #000 88%, transparent);
+  mask-image: linear-gradient(to bottom, transparent, #000 12%, #000 88%, transparent);
+}
+
+.vmarquee-col {
+  overflow: hidden;
+  min-width: 0;
+}
+
+.vmarquee-track {
+  display: flex;
+  flex-direction: column;
+  will-change: transform;
+  animation: vmarqueeUp 40s linear infinite;
+}
+
+/* right column: slightly different speed feels more natural */
+.vmarquee-down {
+  animation-name: vmarqueeDown;
+  animation-duration: 46s;
+}
+
+/* pause when hovering the carousels */
+.hero-vmarquee:hover .vmarquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes vmarqueeUp {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-50%); }
+}
+@keyframes vmarqueeDown {
+  from { transform: translateY(-50%); }
+  to   { transform: translateY(0); }
+}
+
+/* margin-bottom (not gap) so the -50% loop is pixel-perfect */
+.vmarquee-card {
+  position: relative;
+  flex: 0 0 auto;
+  width: 100%;
+  margin-bottom: var(--vm-gap);
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  background-color: var(--card-bg);
+}
+
+/* all cards same size — change --vm-card-h to resize */
+.vmarquee-card { height: var(--vm-card-h); }
+
+.vmarquee-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+.vmarquee-card:hover img { transform: scale(1.05); }
+
+.vmarquee-label {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 12px 14px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.vmarquee-card:hover .vmarquee-label {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vmarquee-track { animation: none; }
 }
